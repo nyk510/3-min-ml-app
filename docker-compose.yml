@@ -2,7 +2,8 @@ version: '2.3'
 services:
   app:
     build: .
-    command: /bin/bash/
     tty: true
+    volumes:
+      - ./:/www/app/
     ports:
-      - 8000:8000
+      - "8501:8501"
